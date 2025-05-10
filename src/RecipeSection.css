@@ -1,0 +1,179 @@
+.recipe-section {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.recipe-section h2 {
+  font-size: 2.4rem;
+  color: #9d0208;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  text-shadow: 1px 1px #f2d0c9;
+}
+
+/* Grid layout for recipes */
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual card */
+.recipe-card {
+  background: rgba(255, 242, 229, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+  border: 1px solid #ffd6b4;
+}
+
+.recipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smoother effect */
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-bottom: 2px solid #fff1e0;
+}
+
+.recipe-card-content {
+  padding: 1.5rem;
+}
+
+.recipe-card-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #6a040f;
+  margin-bottom: 0.6rem;
+  text-shadow: 0.5px 0.5px #ffe0d1;
+}
+
+.recipe-card-description {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  /* Optional: remove text-shadow for cleaner text */
+  text-shadow: none;
+}
+
+.recipe-card button {
+  background: linear-gradient(90deg, #f48c06, #dc2f02);
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(244, 140, 6, 0.3);
+}
+
+.recipe-card button:hover {
+  background: #d00000;
+  transform: scale(1.05);
+  background-color: #d00000;  /* Adding background color */
+}
+
+.recipe-card button:focus {
+  outline: 3px solid #f48c06;  /* Adding visible focus outline for accessibility */
+}
+
+/* Gemini response styled as recipe card */
+.recipe-card.gemini-response {
+  background-color: #fff8f0;
+  border: 1px solid #ffd8b1;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  color: #2e1f12;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Paragraphs inside Gemini */
+.recipe-card.gemini-response p {
+  margin-bottom: 1rem;
+}
+
+/* Lists inside Gemini */
+.recipe-card.gemini-response ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.recipe-card.gemini-response li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+/* Highlighted Tips */
+.recipe-card.gemini-response .tip {
+  background-color: #fff0e6;
+  border-left: 5px solid #faa307;
+  padding: 1rem;
+  border-radius: 8px;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #4e3629;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .recipe-section {
+    padding: 2rem 1rem;
+  }
+
+  .recipe-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .recipe-card img {
+    height: 160px;
+  }
+
+  .recipe-card-content {
+    padding: 1rem;
+  }
+
+  /* Adjust font size for Gemini response on smaller screens */
+  .recipe-card.gemini-response {
+    font-size: 0.95rem;  /* Slightly smaller font size for better legibility */
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .recipe-card img {
+    height: 140px;
+  }
+
+  .recipe-card-title {
+    font-size: 1.1rem;
+  }
+
+  .recipe-card-description {
+    font-size: 0.9rem;
+  }
+
+  .recipe-card button {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.9rem;
+  }
+}
